@@ -1,4 +1,4 @@
-import './UserCardForm.scss';
+import './userCardForm.scss';
 
 import React, { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';

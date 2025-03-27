@@ -1,5 +1,5 @@
 'use client';
-import './SearchBar.scss';
+import './searchBar.scss';
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';

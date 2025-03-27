@@ -1,0 +1,80 @@
+@use '@theme/colors.module.scss' as *;
+@use '@theme/viewport.scss' as *;
+@use '@theme/common.module.scss' as *;
+@use '@theme/gradient.module.scss' as *;
+
+.usersTableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+
+    @include tablet {
+        font-size: 0.8rem;
+    }
+    @include mobile {
+        font-size: 0.7rem;
+    }
+
+    thead {
+        tr {
+            background-color: $LightCeruleanBlue;
+            th {
+                padding: 1rem;
+                text-align: left;
+                color: white;
+                background-color: $LightCeruleanBlue;
+                text-wrap: nowrap;
+                @include tablet {
+                    font-size: 1rem;
+                }
+                @include mobile {
+                    font-size: 0.9rem;
+                }
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: white;
+            &:nth-child(even) {
+                background-color: $B2;
+            }
+            td {
+                padding: 1rem;
+                text-align: left;
+                color: black;
+                text-wrap: nowrap;
+                @include tablet {
+                    font-size: 1rem;
+                }
+                @include mobile {
+                    font-size: 0.9rem;
+                }
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 1;
+                    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+                    @include tablet {
+                        background-color: white;
+                    }
+                }
+                > button {
+                    width: auto;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use '@theme/viewport.scss' as *;
+@use '@theme/common.module.scss' as *;
+.view-wrapper {
+    max-width: $view-width;
+    padding: 3rem 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    @include tablet {
+    }
+    @include mobile {
+        padding: 2rem 1.25rem;
+    }
+}

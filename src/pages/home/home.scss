@@ -1,0 +1,81 @@
+@use '@theme/colors.module.scss' as *;
+@use '@theme/viewport.scss' as *;
+@use '@theme/common.module.scss' as *;
+@use '@theme/gradient.module.scss' as *;
+
+.home-layout {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    @include flex-model(column, flex-start, flex-start, 1.5rem);
+    > .title-wrapper {
+        @include flex-model(row, center, flex-start, 1rem);
+        align-self: flex-start;
+        > svg {
+            width: 50px;
+            height: 50px;
+        }
+        @include mobile {
+            > h1 {
+                font-size: 2rem;
+                line-height: 2.7rem;
+            }
+            > svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    > .results-text {
+        @include flex-model(row, center, flex-start, 1rem);
+        > svg {
+            width: 40px;
+            height: 40px;
+            padding: 0.5rem;
+            background-color: $LightCeruleanBlue;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    }
+    > .search-bar {
+        align-self: flex-end;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    > h3 {
+        align-self: flex-start;
+    }
+    > .add-more-btn {
+        align-self: flex-end;
+        @include mobile {
+            position: sticky !important;
+            width: 100%;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+        > button {
+            width: 250px;
+            border-radius: 10px;
+            border: 1px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            > svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.loader-wrapper,
+#unknown-error {
+    width: 100%;
+    min-height: 100vh;
+    @include flex-model(column, center, center, 1rem);
+    margin: auto;
+}

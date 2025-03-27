@@ -1,0 +1,54 @@
+@use '@theme/colors.module.scss' as *;
+@use '@theme/viewport.scss' as *;
+@use '@theme/common.module.scss' as *;
+@use '@theme/gradient.module.scss' as *;
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    background: white;
+    border: 2px solid $LightCeruleanBlue;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &:focus-within {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    > .search-icon {
+        width: 20px;
+        height: 20px;
+        color: $LightCeruleanBlue;
+        margin-left: 10px;
+    }
+
+    > .search-input {
+        flex: 1;
+        border: none;
+        font-size: 14px;
+        padding: 8px 10px;
+        outline: none;
+        color: #333;
+        background: transparent;
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+
+    .clear-btn {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: red;
+        }
+    }
+}

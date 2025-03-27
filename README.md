@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Structure
 
-## Getting Started
+### `src/`
 
-First, run the development server:
+- Contains all source code for the application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### `app/`
+
+- Houses the main `page.tsx`, the entry point for the frontend.
+
+### `components/`
+
+- Reusable UI components for different sections of the app.
+    - `SearchBar/` - Includes `index.tsx` and `searchBar.scss` for the search bar UI.
+    - `UserCardForm/` - User form component with styling.
+    - `usersTable/` - User table UI.
+
+### `library/`
+
+- A shared custom UI reusable components
+
+### `pages/`
+
+- (Unused or for static page-based routing if applicable)
+
+### `provider/`
+
+- contains context providers for state management.
+
+### `store/`
+
+- Manages global state using Redux.
+    - `hooks/` - Custom hooks for state interactions.
+    - `slices/` - Redux slices, including `users.tsx` and `store.tsx`.
+
+### `theme/`
+
+- SCSS styles and theme configurations.
+    - `colors.module.scss` - Color variables.
+    - `common.module.scss` - Shared styles.
+    - `gradient.module.scss` - Gradient styles.
+    - `viewport.scss` - Responsive design styles.
+
+### `types/`
+
+- TypeScript type definitions.
+    - `users.ts` - User-related type definitions.
+
+### `utils/`
+
+- Helper functions and configurations.
+    - `schema.tsx` - contains form validation schemas.
+    - `config.ts` - Configuration file.
+
+---
+
+## 🛠 Setup & Installation
+
+### 1️⃣ Install Dependencies
+
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Run the Development Server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- The app will run on `http://localhost:3000`
 
-## Learn More
+### 3️⃣ Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Generates optimized build files in `.next/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔧 Code Quality & Linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Run ESLint
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run lint
+```
+
+### Format Code
+
+"
+
+```sh
+npm run format
+```
+
+---
+
+## 🚀 Deployment
+
+1. Ensure `.env` variables are set.
+2. Use `next build` and `next start` for deployment.
